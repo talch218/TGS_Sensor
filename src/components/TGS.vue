@@ -140,7 +140,7 @@ export default {
         this.rt = this.ra2 = rmin * 2;
       }
 
-      const pn = 0.01;
+      const pn = 0.001;
       const In = pn / this.vcc;
       const vn = Imin * this.ra2;
       this.rn2 = vn / In;
