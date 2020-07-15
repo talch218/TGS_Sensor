@@ -135,6 +135,11 @@ export default {
       this.ra2 = this.v_range * 0.85 / (Imax - Imin);
       this.ra1 = this.rt - this.ra2;
 
+      if (this.ra1 < 0) {
+        this.ra1 = 0;
+        this.rt = this.ra2 = rmin * 2;
+      }
+
       const pn = 0.01;
       const In = pn / this.vcc;
       const vn = Imin * this.ra2;
